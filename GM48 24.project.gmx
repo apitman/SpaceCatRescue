@@ -11,7 +11,9 @@
     <sprite>sprites\sprShipTile</sprite>
     <sprite>sprites\sprShipLeader</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\backgroundSpace</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts"/>
   <objects name="objects">

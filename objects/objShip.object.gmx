@@ -3,7 +3,7 @@
   <spriteName>sprShip</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,6 +29,7 @@
 
 // Initialize variables
 fireMode = false;
+shipSpeed = 10;
 
 // Stop animation
 image_speed = 0;
@@ -59,21 +60,31 @@ image_index = 0;
             <string>///Handle player input
 
 if (!fireMode) {
-    // Check for fire input
+    // Reset starting hspeed
+    hspeed = 0;
+
+        // Check for fire input
     if (keyboard_check(vk_space)) {
         // Enter firing mode and ignore other inputs
         fireMode = true;
         instance_create(x, y, objPlayer);
+        return 0;
     }
     
     // Handle left/right movement
-    hspeed = 0;
     if (keyboard_check(vk_left)) {
-        hspeed -= 5;
+        hspeed -= shipSpeed;
     }
     
     if (keyboard_check(vk_right)) {
-        hspeed += 5;
+        hspeed += shipSpeed;
+    }
+    
+    // Prevent player from going off-screen
+    if (x &lt; 0 &amp;&amp; hspeed &lt; 0) {
+        hspeed = 0;
+    } else if (x &gt; 1024 &amp;&amp; hspeed &gt; 0) {
+        hspeed = 0;
     }
 }
 
