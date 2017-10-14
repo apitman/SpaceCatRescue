@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Constructor
 
-// Create the player inside the ship
-instance_create(x, y, objPlayer);
+// Initialize variables
+fireMode = false;
 
 // Stop animation
 image_speed = 0;
@@ -58,19 +58,23 @@ image_index = 0;
             <kind>1</kind>
             <string>///Handle player input
 
-// Check for fire
-if (keyboard_check(vk_space)) {
-    // Enter firing mode and ignore other inputs
-}
-
-// Handle left/right movement
-hspeed = 0;
-if (keyboard_check(vk_left)) {
-    hspeed -= 5;
-}
-
-if (keyboard_check(vk_right)) {
-    hspeed += 5;
+if (!fireMode) {
+    // Check for fire input
+    if (keyboard_check(vk_space)) {
+        // Enter firing mode and ignore other inputs
+        fireMode = true;
+        instance_create(x, y, objPlayer);
+    }
+    
+    // Handle left/right movement
+    hspeed = 0;
+    if (keyboard_check(vk_left)) {
+        hspeed -= 5;
+    }
+    
+    if (keyboard_check(vk_right)) {
+        hspeed += 5;
+    }
 }
 
 </string>
