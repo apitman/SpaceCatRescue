@@ -25,12 +25,53 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Create the player inside the ship
+            <string>///Constructor
+
+// Create the player inside the ship
 instance_create(x, y, objPlayer);
 
-// Don't animate
+// Stop animation
 image_speed = 0;
 image_index = 0;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Handle player input
+
+// Check for fire
+if (keyboard_check(vk_space)) {
+    // Enter firing mode and ignore other inputs
+}
+
+// Handle left/right movement
+hspeed = 0;
+if (keyboard_check(vk_left)) {
+    hspeed -= 5;
+}
+
+if (keyboard_check(vk_right)) {
+    hspeed += 5;
+}
 
 </string>
           </argument>
