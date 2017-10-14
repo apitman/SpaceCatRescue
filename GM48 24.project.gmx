@@ -5,9 +5,24 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprPlayer</sprite>
+    <sprite>sprites\sprShip</sprite>
+    <sprite>sprites\sprShipTile</sprite>
+    <sprite>sprites\sprShipLeader</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
+  <objects name="objects">
+    <object>objects\objShipTile</object>
+    <object>objects\objShip</object>
+    <object>objects\objPlayer</object>
+    <object>objects\objShipLeader</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rmTutorial1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
