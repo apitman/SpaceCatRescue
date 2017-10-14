@@ -219,6 +219,7 @@
     <instance objName="objShipTile" x="576" y="192" name="inst_DAB3814A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objShipTile" x="544" y="192" name="inst_F96683C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objShipLeader" x="512" y="192" name="inst_99485AEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDebugHelper" x="32" y="352" name="inst_20FB3151" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -21,6 +21,7 @@
     <object>objects\objShip</object>
     <object>objects\objPlayer</object>
     <object>objects\objShipLeader</object>
+    <object>objects\objDebugHelper</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTutorial1</room>
