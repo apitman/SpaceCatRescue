@@ -84,11 +84,22 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
     room_goto_next();
 } else if (room &gt; 0 &amp;&amp; room_next(room) != -1 &amp;&amp; global.victoryMode &amp;&amp; alarm_get(0) &lt; 0) {
     // Set an alarm to go to the next level in a moment
-    // Display victory text
     alarm_set(0, 60 * 2);
 } else if (global.victoryMode) {
     // Display victory text
     drawVictoryText = true;
+
+    // Delay alarm to go to the next level if we aren't in the ship yet
+    var delayAlarm = true;
+    with (objShip) {
+        // TODO: Delete this second condition at some point
+        if (image_index == 2 || room == 1) {
+            delayAlarm = false;
+        }
+    }
+    if (delayAlarm) {
+        alarm_set(0, 60 * 2);
+    }
 }
 
 </string>
