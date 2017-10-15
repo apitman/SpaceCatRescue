@@ -111,9 +111,9 @@ with (objShip) {
         }
         instance_destroy(other);
 
-        // Disable the shoot button for a period of 2 seconds
+        // Disable the shoot button for a period of 1 second
         reloading = true;
-        alarm_set(0, 60 * 2);
+        alarm_set(0, 60 * 1);
 
         // Play reverse airlock sounds
         audio_play_sound(whooshReverse, 10, false);

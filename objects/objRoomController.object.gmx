@@ -90,7 +90,7 @@ if ((room == rmTitle || room == rmStory) &amp;&amp; keyboard_check_pressed(vk_en
 } else if (room == rmTutorial1 &amp;&amp; global.everReturnedToShip &amp;&amp; alarm_get(0) &lt; 0) {
     // Set an alarm to go to the next level in a moment
     global.victoryMode = true;
-    alarm_set(0, 60 * 1);
+    alarm_set(0, 60 * 2);
 } else if (global.victoryMode) {
     // Display victory text
     drawVictoryText = true;
@@ -136,18 +136,28 @@ if (room == rmTitle) {
     // Draw text on title screen
     scriptWriteTitleScreen();
 } else if (room == rmStory) {
-    var line1 = "Story goes here.";
-    var line2 = "Just press Enter for now.";
-    scriptWriteDialog(line1, line2);
+    //var ln0 = "This is the maximum length of a line of dialog text.............";
+    var line1 = "Your cat, Biggie, has been abducted. You've got no ammo, but you";
+    var line2 = "do have something else you can launch at the prison ship holding";
+    var line3 = "your cat... yourself. Become the one shot your ship can fire in";
+    var line4 = "order to save your cat. Press Enter to continue.";
+    scriptWriteDialog(line1, line2, line3, line4);
 } else if (room == rmTutorial1) {
     // Write instructions at the top of the screen
-    var line1 = "Press the spacebar to launch yourself. Don't worry, you've got a";
-    var line2 = "tether to the ship, so you'll be able to get back.";
-    scriptWriteDialog(line1, line2);
+    var line1 = "Press the left and right arrow keys to move side-to-side. When";
+    var line2 = "you're ready, press the spacebar to launch yourself. Don't worry,";
+    var line3 = "you've got a tether to the ship, so you'll be able to get back.";
+    scriptWriteDialog(line1, line2, line3);
 } else if (room == rmTutorial2) {
     // Write instructions at the top of the screen
     var line1 = "Press spacebar repeatedly after launching yourself to swing that";
-    var line2 = "sword you've got. Destroy the ship holding Biggie and rescue him!";
+    var line2 = "sword you've got. Destroy the ship holding Biggie, and rescue";
+    var line3 = "him when he pops out!";
+    scriptWriteDialog(line1, line2, line3);
+} else if (room == rmBoss1) {
+    // Write instructions at the top of the screen
+    var line1 = "Biggie's in a much bigger ship this time. Break him out and take";
+    var line2 = "him home!";
     scriptWriteDialog(line1, line2);
 }
 

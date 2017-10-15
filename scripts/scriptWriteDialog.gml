@@ -16,11 +16,13 @@ if (argument_count > 3) {
 
 draw_set_colour(c_aqua);
 draw_set_halign(fa_left);
-draw_text(50, 50, line1);
-draw_text(50, 90, line2);
-draw_text(50, 130, line3);
-draw_text(50, 170, line4);
+draw_set_valign(fa_top);
+draw_text(20, 10, line1);
+draw_text(20, 50, line2);
+draw_text(20, 90, line3);
+draw_text(20, 130, line4);
 
-// Reset the halign since I probably don't fix that elsewhere
+// Reset the halign and valign since I probably don't fix that elsewhere
 draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
 
