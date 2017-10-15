@@ -63,12 +63,16 @@ if (!fireMode) {
     // Reset starting hspeed
     hspeed = 0;
 
-        // Check for fire input
+    // Check for fire input
     if (keyboard_check(vk_space)) {
         // Enter firing mode and ignore other inputs
         fireMode = true;
         instance_create(x + 3, y - 2, objPlayer);
         image_index = 1;
+        with (objViewController) {
+            zoomIn = true;
+            zoomOut = false;
+        }
         exit;
     }
     
@@ -81,7 +85,7 @@ if (!fireMode) {
         hspeed += shipSpeed;
     }
     
-    // Prevent player from going off-screen
+    // Prevent player from going too far off-screen
     if (x &lt; 0 &amp;&amp; hspeed &lt; 0) {
         hspeed = 0;
     } else if (x &gt; 1024 &amp;&amp; hspeed &gt; 0) {

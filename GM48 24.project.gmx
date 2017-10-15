@@ -15,13 +15,16 @@
     <background>background\backgroundSpace</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\scriptViewZoom.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objShipTile</object>
     <object>objects\objShip</object>
     <object>objects\objPlayer</object>
     <object>objects\objShipLeader</object>
     <object>objects\objDebugHelper</object>
+    <object>objects\objViewController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTutorial1</room>
