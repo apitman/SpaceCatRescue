@@ -8,6 +8,58 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Constructor
+
+// Initialize variables
+drawVictoryText = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set victoryMode to false and go to the next room
+global.victoryMode = false;
+room_goto_next();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,13 +77,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Respond to player input
+            <string>///Respond to player input and victory conditions
 
 // Allow player to advance past title screen
 if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(room) != -1) {
     room_goto_next();
+} else if (room &gt; 0 &amp;&amp; room_next(room) != -1 &amp;&amp; global.victoryMode &amp;&amp; alarm_get(0) &lt; 0) {
+    // Set an alarm to go to the next level in a moment
+    // Display victory text
+    alarm_set(0, 60 * 2);
+} else if (global.victoryMode) {
+    // Display victory text
+    drawVictoryText = true;
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw victory text if we have won
+if (room == 0) {
+    // Draw text on title screen
+    scriptWriteTitleScreen();
+} else if (drawVictoryText) {
+    // Draw victory text
+    scriptWriteVictoryText();
+}
 </string>
           </argument>
         </arguments>

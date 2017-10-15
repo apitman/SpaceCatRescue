@@ -52,6 +52,31 @@ instance_create(496, 400, objShip);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+    <instance objName="objShipTile" x="448" y="160" name="inst_44C75E12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="480" y="160" name="inst_AFCF3261" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="160" name="inst_460AF60C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="192" name="inst_C435B57F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="224" name="inst_7EF46B67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="256" name="inst_BBC99EC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="224" name="inst_DF3470E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="224" name="inst_7938EA7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="448" y="256" name="inst_3960AF27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="480" y="256" name="inst_D96D89C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="576" y="256" name="inst_6ED7FA42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="576" y="160" name="inst_D6409084" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="544" y="160" name="inst_D63F5E01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="512" y="160" name="inst_2DA61DD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="480" y="160" name="inst_B561DE84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="480" y="192" name="inst_A39A75CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="480" y="224" name="inst_3C8F4950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="512" y="224" name="inst_692467C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="512" y="256" name="inst_EB449590" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="544" y="256" name="inst_C05A0BAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="544" y="224" name="inst_D5FCFAB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="576" y="224" name="inst_5BFC17CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="576" y="192" name="inst_DAB3814A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipTile" x="544" y="192" name="inst_F96683C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objShipLeader" x="512" y="192" name="inst_99485AEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDebugHelper" x="32" y="352" name="inst_20FB3151" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objViewController" x="32" y="384" name="inst_9D4B2B12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRoomController" x="32" y="416" name="inst_10D7AE88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

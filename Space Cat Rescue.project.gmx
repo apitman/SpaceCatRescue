@@ -35,7 +35,13 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scriptViewZoom.gml</script>
+    <script>scripts\scriptWriteTitleScreen.gml</script>
+    <script>scripts\scriptWriteVictoryText.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fontTitle</font>
+    <font>fonts\fontDialog</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objShipTile</object>
     <object>objects\objShip</object>
@@ -50,6 +56,8 @@
   <rooms name="rooms">
     <room>rooms\rmTitle</room>
     <room>rooms\rmTutorial1</room>
+    <room>rooms\rmTutorial2</room>
+    <room>rooms\rmBoss1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

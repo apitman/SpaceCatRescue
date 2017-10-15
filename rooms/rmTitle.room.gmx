@@ -14,7 +14,10 @@
 global.destroyedIndex = 0;
 global.victoryMode = false;
 randomize();
-audio_master_gain(0.05);</code>
+audio_master_gain(0.05);
+
+// Display title text
+scriptWriteTitleScreen();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
