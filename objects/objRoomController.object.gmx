@@ -92,12 +92,11 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
     // Delay alarm to go to the next level if we aren't in the ship yet
     var delayAlarm = true;
     with (objShip) {
-        // TODO: Delete this second condition at some point
-        if (image_index == 2 || room == 1) {
+        if (image_index != 1) {
             delayAlarm = false;
         }
     }
-    if (delayAlarm) {
+    if (delayAlarm &amp;&amp; room_next(room) != -1) {
         alarm_set(0, 60 * 2);
     }
 }
@@ -131,6 +130,10 @@ if (room == 0) {
 } else if (drawVictoryText) {
     // Draw victory text
     scriptWriteVictoryText();
+    // Draw game win text if this is the last room
+    if (room_next(room) == -1) {
+        scriptWriteGameWinText();
+    }
 }
 </string>
           </argument>
