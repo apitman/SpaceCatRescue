@@ -4,11 +4,27 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\meow1</sound>
+    <sound>sound\meow2</sound>
+    <sound>sound\meow3</sound>
+    <sound>sound\meow4</sound>
+    <sound>sound\headBump</sound>
+    <sound>sound\tileExplosion</sound>
+    <sound>sound\ding</sound>
+    <sound>sound\tileHitCrunch</sound>
+    <sound>sound\tileHit</sound>
+    <sound>sound\latch</sound>
+    <sound>sound\rubberBand</sound>
+    <sound>sound\whoosh</sound>
+    <sound>sound\whooshReverse</sound>
+    <sound>sound\swordSwing</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
     <sprite>sprites\sprShip</sprite>
     <sprite>sprites\sprShipTile</sprite>
+    <sprite>sprites\sprShipTileDestroyed</sprite>
     <sprite>sprites\sprShipLeader</sprite>
   </sprites>
   <backgrounds name="background">
@@ -25,6 +41,7 @@
     <object>objects\objShipLeader</object>
     <object>objects\objDebugHelper</object>
     <object>objects\objViewController</object>
+    <object>objects\objShipTileDestroyed</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTutorial1</room>
