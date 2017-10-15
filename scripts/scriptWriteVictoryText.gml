@@ -1,4 +1,4 @@
-///scriptWriteVictoryText(finalTime)
+///scriptWriteVictoryText(finalTime, replacementText)
 var view = 0;
 var text = "You rescued Biggie!";
 var text2 = "";
@@ -6,6 +6,10 @@ if (argument_count > 0) {
     if (argument[0]) {
         text = "You rescued Biggie";
         text2 = "for the last time!";
+    }
+    if (argument_count > 1) {
+        text = argument[1];
+        text2 = "";
     }
 }
 

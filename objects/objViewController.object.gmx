@@ -57,8 +57,8 @@ camCenterY = 768 / 2;
             <kind>1</kind>
             <string>///Handle zooming and camera movement
 var view = 0;
-var maxSpeed = view_wview[view] / 200; // Max camera move speed
-var zoomSpeed = 0.01;
+var maxSpeed = view_wview[view] / 100; // Max camera move speed
+var zoomSpeed = 0.015;
 
 if (zoomIn || global.victoryMode) {
     // Zooming
@@ -67,7 +67,7 @@ if (zoomIn || global.victoryMode) {
     // Movement
     with (objPlayer) {
         // A different y target depending on whether the player is going up or down
-        var yModifier = 0.75;
+        var yModifier = 0.6;
         if (returning) yModifier = 0.5;
         var xDiff = x - (0.5 * view_wview[view]) - view_xview[view];
         var xDir = -1;

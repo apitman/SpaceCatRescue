@@ -79,12 +79,18 @@ room_goto_next();
             <kind>1</kind>
             <string>///Respond to player input and victory conditions
 
+var onLastLevel = room_next(room) == -1;
+
 // Allow player to advance past title screen
-if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(room) != -1) {
+if ((room == rmTitle || room == rmStory) &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; !onLastLevel) {
     room_goto_next();
-} else if (room &gt; 0 &amp;&amp; room_next(room) != -1 &amp;&amp; global.victoryMode &amp;&amp; alarm_get(0) &lt; 0) {
+} else if (room &gt; 0 &amp;&amp; !onLastLevel &amp;&amp; global.victoryMode &amp;&amp; alarm_get(0) &lt; 0) {
     // Set an alarm to go to the next level in a moment
     alarm_set(0, 60 * 2);
+} else if (room == rmTutorial1 &amp;&amp; global.everReturnedToShip &amp;&amp; alarm_get(0) &lt; 0) {
+    // Set an alarm to go to the next level in a moment
+    global.victoryMode = true;
+    alarm_set(0, 60 * 1);
 } else if (global.victoryMode) {
     // Display victory text
     drawVictoryText = true;
@@ -96,7 +102,7 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
             delayAlarm = false;
         }
     }
-    if (delayAlarm &amp;&amp; room_next(room) != -1) {
+    if (delayAlarm &amp;&amp; !onLastLevel) {
         alarm_set(0, 60 * 2);
     }
 }
@@ -123,10 +129,16 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw victory text if we have won and other text
+            <string>///Draw victory and story texts
+var onLastLevel = room_next(room) == -1;
+
 if (room == rmTitle) {
     // Draw text on title screen
     scriptWriteTitleScreen();
+} else if (room == rmStory) {
+    var line1 = "Story goes here.";
+    var line2 = "Just press Enter for now.";
+    scriptWriteDialog(line1, line2);
 } else if (room == rmTutorial1) {
     // Write instructions at the top of the screen
     var line1 = "Press the spacebar to launch yourself. Don't worry, you've got a";
@@ -141,9 +153,13 @@ if (room == rmTitle) {
 
 if (drawVictoryText) {
     // Draw victory text
-    scriptWriteVictoryText(room_next(room) == -1);
+    if (room == rmTutorial1) {
+        scriptWriteVictoryText(onLastLevel, "Good!");
+    } else {
+        scriptWriteVictoryText(onLastLevel);
+    }
     // Draw game win text if this is the last room
-    if (room_next(room) == -1) {
+    if (onLastLevel) {
         scriptWriteGameWinText();
     }
 }

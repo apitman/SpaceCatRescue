@@ -32,7 +32,7 @@ image_speed = 0;
 image_index = 3;
 
 // Initialize variables
-launchSpeed = -2;
+launchSpeed = -4;
 vspeed = launchSpeed;
 returning = false;
 swinging = false;
@@ -95,13 +95,14 @@ if (returning) {
 
 // Destroy objPlayer if we have finished returning to the ship
 with (objShip) {
-    if (y &lt; (other.y + 50 * other.vspeed)) {
+    if (y &lt; (other.y + 20 * other.vspeed)) {
         with (objViewController) {
             zoomIn = false;
             zoomOut = true;
         }
     }
     if (y &lt; (other.y + other.vspeed)) {
+        global.everReturnedToShip = true;
         other.vspeed = 0;
         fireMode = false;
         image_index = 0;
