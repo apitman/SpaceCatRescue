@@ -67,7 +67,7 @@ if (!fireMode) {
     if (keyboard_check(vk_space)) {
         // Enter firing mode and ignore other inputs
         fireMode = true;
-        instance_create(x + 3, y - 2, objPlayer);
+        instance_create(x, y - 2, objPlayer);
         image_index = 1;
         with (objViewController) {
             zoomIn = true;
