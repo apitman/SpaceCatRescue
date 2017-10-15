@@ -136,11 +136,11 @@ with (instance_nearest(x, y, objShipTile)) {
 }
 
 if (abs(xDiff) &gt; abs(yDiff)) {
-    if (xDiff &gt; 0) hspeed = -0.5;
-    if (xDiff &lt;= 0) hspeed = 0.5;
+    if (xDiff &gt; 0) hspeed = -1 * abs(hspeed);
+    if (xDiff &lt;= 0) hspeed = abs(hspeed);
 } else {
-    if (yDiff &gt; 0) vspeed = -0.5;
-    if (yDiff &lt;= 0) vspeed = 0.5;
+    if (yDiff &gt; 0) vspeed = -1 * abs(vspeed);
+    if (yDiff &lt;= 0) vspeed = abs(vspeed);
 }
 
 </string>
