@@ -14,6 +14,7 @@
 global.destroyedIndex = 0;
 global.victoryMode = false;
 global.everReturnedToShip = false;
+global.debugMode = false;
 randomize();
 audio_master_gain(0.05);
 

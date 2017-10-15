@@ -81,6 +81,13 @@ room_goto_next();
 
 var onLastLevel = room_next(room) == -1;
 
+// Escape exits the game after it's over
+if (onLastLevel &amp;&amp; global.victoryMode) {
+    if (keyboard_check_pressed(vk_escape)){
+        game_end();
+    }
+}
+
 // Allow player to advance past title screen
 if ((room == rmTitle || room == rmStory) &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; !onLastLevel) {
     room_goto_next();
