@@ -95,15 +95,15 @@ alarm_set(0, 60 * 10);
             <kind>1</kind>
             <string>///Don't go outside the screen area
 if (x &lt; 0) {
-    hspeed = 0.5;
+    hspeed = abs(hspeed);
 } else if (x &gt; 1024) {
-    hspeed = -0.5;
+    hspeed = -1 * abs(hspeed);
 }
 
-if (y &lt; 0) {
-    vspeed = 0.5;
+if (y &lt; 128) {
+    vspeed = abs(vspeed);
 } else if (y &gt; 768) {
-    vspeed = -0.5;
+    vspeed = -1 * abs(vspeed);
 }
 
 </string>

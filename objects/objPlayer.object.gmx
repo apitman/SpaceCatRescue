@@ -64,7 +64,7 @@ swingAnimationSpeed = 0.25;
             <string>///Handle player input and hitting the top of the screen
 
 // Return if you hit the top of the screen
-if (y &lt;= 0 &amp;&amp; !returning) {
+if (y &lt;= 128 &amp;&amp; !returning) {
     returning = true;
     audio_play_sound(rubberBand, 10, false);
 }

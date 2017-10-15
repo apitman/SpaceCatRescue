@@ -123,13 +123,25 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw victory text if we have won
+            <string>///Draw victory text if we have won and other text
 if (room == 0) {
     // Draw text on title screen
     scriptWriteTitleScreen();
-} else if (drawVictoryText) {
+} else if (room == rmTutorial1) {
+    // Write instructions at the top of the screen
+    var line1 = "Press the spacebar to launch yourself. Don't worry, you've got a";
+    var line2 = "tether to the ship, so you'll be able to get back.";
+    scriptWriteDialog(line1, line2);
+} else if (room == rmTutorial2) {
+    // Write instructions at the top of the screen
+    var line1 = "Press spacebar repeatedly after launching yourself to swing that";
+    var line2 = "sword you've got. Destroy the ship holding Biggie and rescue him!";
+    scriptWriteDialog(line1, line2);
+}
+
+if (drawVictoryText) {
     // Draw victory text
-    scriptWriteVictoryText();
+    scriptWriteVictoryText(room_next(room) == -1);
     // Draw game win text if this is the last room
     if (room_next(room) == -1) {
         scriptWriteGameWinText();

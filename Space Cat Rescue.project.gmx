@@ -38,6 +38,7 @@
     <script>scripts\scriptWriteTitleScreen.gml</script>
     <script>scripts\scriptWriteVictoryText.gml</script>
     <script>scripts\scriptWriteGameWinText.gml</script>
+    <script>scripts\scriptWriteDialog.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontTitle</font>
