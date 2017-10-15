@@ -138,10 +138,8 @@ with (objShip) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy the ship tile if player is swinging
-if (other.swinging) {
-    instance_destroy(self);
-}
+            <string>///Destroy the ship tile
+instance_destroy(self);
 
 </string>
           </argument>
