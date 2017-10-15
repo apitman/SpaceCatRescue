@@ -163,9 +163,13 @@ if (room == rmTitle) {
     scriptWriteDialog(line1, line2, line3);
 } else if (room == rmBoss1) {
     // Write instructions at the top of the screen
-    var line1 = "Biggie's in a much bigger ship this time. Break him out and take";
+    var line1 = "Biggie's in a bigger ship this time. Break him out and take";
     var line2 = "him home!";
     scriptWriteDialog(line1, line2);
+} else if (room == rmBoss2) {
+    // Write instructions at the top of the screen
+    var line1 = "Same thing as before. Rescue Biggie!";
+    scriptWriteDialog(line1);
 }
 
 if (drawVictoryText) {

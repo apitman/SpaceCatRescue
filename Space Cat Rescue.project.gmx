@@ -61,6 +61,8 @@
     <room>rooms\rmTutorial1</room>
     <room>rooms\rmTutorial2</room>
     <room>rooms\rmBoss1</room>
+    <room>rooms\rmBoss2</room>
+    <room>rooms\rmBossFinal</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
