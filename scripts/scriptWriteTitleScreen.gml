@@ -10,5 +10,6 @@ draw_set_font(fontTitle);
 draw_text(view_wview[view] * 0.5, view_hview[view] * 0.1, "Space Cat Rescue!");
 
 draw_set_font(fontDialog);
-draw_text(view_wview[view] * 0.5, view_hview[view] * 0.25, "Press Enter to begin");
+draw_text(view_wview[view] * 0.5, view_hview[view] * 0.20, "an Andrew Pitman game");
+draw_text(view_wview[view] * 0.5, view_hview[view] * 0.35, "Press Enter to begin");
 
