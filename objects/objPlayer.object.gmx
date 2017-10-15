@@ -195,7 +195,12 @@ with (objViewController) {
           <argument>
             <kind>1</kind>
             <string>///Affect the player's movement
+var touchingHardBlock = place_meeting(x, y, objShipLeader);
 if (swinging) {
+    touchingHardBlock = place_meeting(x, y + 32, objShipLeader);
+}
+
+if (swinging &amp;&amp; !touchingHardBlock) {
     // TODO: Add slowdown/climbing/screenshake here
 } else {
     returning = true;
