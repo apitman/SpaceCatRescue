@@ -45,8 +45,10 @@
     <object>objects\objViewController</object>
     <object>objects\objShipTileDestroyed</object>
     <object>objects\objCatAstronaut</object>
+    <object>objects\objRoomController</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmTitle</room>
     <room>rooms\rmTutorial1</room>
   </rooms>
   <help>
