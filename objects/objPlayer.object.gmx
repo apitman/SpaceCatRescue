@@ -105,6 +105,9 @@ with (objShip) {
         image_index = 0;
         instance_destroy(other);
     }
+    // Disable the shoot button for a period of 2 seconds
+    reloading = true;
+    alarm_set(0, 60 * 2);
 }
 </string>
           </argument>
