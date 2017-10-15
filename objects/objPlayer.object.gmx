@@ -64,8 +64,9 @@ swingAnimationSpeed = 0.25;
             <string>///Handle player input and hitting the top of the screen
 
 // Return if you hit the top of the screen
-if (y &lt;= 0) {
+if (y &lt;= 0 &amp;&amp; !returning) {
     returning = true;
+    audio_play_sound(rubberBand, 10, false);
 }
 
 // Handle sword-swinging animations
@@ -83,6 +84,7 @@ if (swingAgain || keyboard_check_pressed(vk_space)) {
         image_index = 0;
         image_speed = swingAnimationSpeed; // game is running at 60 fps
         swinging = true;
+        audio_play_sound(swordSwing, 9, false);
     }
 }
 
@@ -104,10 +106,15 @@ with (objShip) {
         fireMode = false;
         image_index = 0;
         instance_destroy(other);
+
+        // Disable the shoot button for a period of 2 seconds
+        reloading = true;
+        alarm_set(0, 60 * 2);
+
+        // Play reverse airlock sounds
+        audio_play_sound(whooshReverse, 10, false);
+        audio_play_sound(latch, 10, false);
     }
-    // Disable the shoot button for a period of 2 seconds
-    reloading = true;
-    alarm_set(0, 60 * 2);
 }
 </string>
           </argument>
@@ -158,9 +165,10 @@ if (other.swinging) {
             <kind>1</kind>
             <string>///Affect the player's movement
 if (swinging) {
-    // TODO: Add slowdown here
+    // TODO: Add slowdown/climbing/screenshake here
 } else {
     returning = true;
+    audio_play_sound(headBump, 10, false);
 }
 </string>
           </argument>
