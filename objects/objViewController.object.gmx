@@ -60,7 +60,7 @@ var view = 0;
 var maxSpeed = view_wview[view] / 200; // Max camera move speed
 var zoomSpeed = 0.01;
 
-if (zoomIn) {
+if (zoomIn || global.victoryMode) {
     // Zooming
     scriptViewZoom(-1 * zoomSpeed, view);
 
@@ -80,7 +80,7 @@ if (zoomIn) {
     }
 }
 
-if (zoomOut) {
+if (zoomOut &amp;&amp; !global.victoryMode) {
     // Zooming
     scriptViewZoom(zoomSpeed, view);
 

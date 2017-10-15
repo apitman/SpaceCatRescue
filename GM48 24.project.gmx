@@ -22,10 +22,12 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
+    <sprite>sprites\sprPlayerWithCat</sprite>
     <sprite>sprites\sprShip</sprite>
     <sprite>sprites\sprShipTile</sprite>
     <sprite>sprites\sprShipTileDestroyed</sprite>
     <sprite>sprites\sprShipLeader</sprite>
+    <sprite>sprites\sprCatAstronaut</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backgroundSpace</background>
@@ -42,6 +44,7 @@
     <object>objects\objDebugHelper</object>
     <object>objects\objViewController</object>
     <object>objects\objShipTileDestroyed</object>
+    <object>objects\objCatAstronaut</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTutorial1</room>

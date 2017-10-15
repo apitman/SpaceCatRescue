@@ -12,7 +12,9 @@
   <showcolour>-1</showcolour>
   <code>// Initialize global variables
 global.destroyedIndex = 0;
+global.victoryMode = false;
 randomize();
+audio_master_gain(0.05);
 
 // Spawn the player
 instance_create(500, 700, objShip);</code>

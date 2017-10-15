@@ -60,7 +60,9 @@ image_index = 0;
             <kind>1</kind>
             <string>///Set reloading to false again
 reloading = false;
-audio_play_sound(ding, 1, false);
+if (!global.victoryMode) {
+    audio_play_sound(ding, 1, false);
+}
 
 </string>
           </argument>
@@ -91,7 +93,7 @@ if (!fireMode) {
     hspeed = 0;
 
     // Check for fire input
-    if (!reloading &amp;&amp; keyboard_check(vk_space)) {
+    if (!reloading &amp;&amp; !global.victoryMode &amp;&amp; keyboard_check(vk_space)) {
         // Enter firing mode and ignore other inputs
         fireMode = true;
         instance_create(x, y - 2, objPlayer);
@@ -106,11 +108,11 @@ if (!fireMode) {
     }
     
     // Handle left/right movement
-    if (keyboard_check(vk_left)) {
+    if (!global.victoryMode &amp;&amp; keyboard_check(vk_left)) {
         hspeed -= shipSpeed;
     }
     
-    if (keyboard_check(vk_right)) {
+    if (!global.victoryMode &amp;&amp; keyboard_check(vk_right)) {
         hspeed += shipSpeed;
     }
     

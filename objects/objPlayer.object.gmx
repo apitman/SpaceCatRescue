@@ -75,7 +75,7 @@ if (image_index &gt;= image_number - 1) {
     image_speed = 0;
     swinging = false;
 }
-if (swingAgain || keyboard_check_pressed(vk_space)) {
+if (!global.victoryMode &amp;&amp; (swingAgain || keyboard_check_pressed(vk_space))) {
     swingAgain = false;
     if (swinging = true) {
         // Buffer input
@@ -105,6 +105,9 @@ with (objShip) {
         other.vspeed = 0;
         fireMode = false;
         image_index = 0;
+        if (global.victoryMode) {
+            image_index = 2;
+        }
         instance_destroy(other);
 
         // Disable the shoot button for a period of 2 seconds
@@ -121,7 +124,7 @@ with (objShip) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objShipTile">
+    <event eventtype="4" ename="objCatAstronaut">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -138,13 +141,42 @@ with (objShip) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy the ship tile
+            <string>///Destroy the cat astronaut object
 instance_destroy(self);
+audio_play_sound(meow4, 11, false);
 
 </string>
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set player to victory sprite and trigger win camera
+sprite_index = sprPlayerWithCat;
+with (objViewController) {
+    global.victoryMode = true;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objShipTile">
       <action>
         <libid>1</libid>
         <id>603</id>
