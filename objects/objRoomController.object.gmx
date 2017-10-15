@@ -124,7 +124,7 @@ if (room == 0 &amp;&amp; keyboard_check_pressed(vk_enter) &amp;&amp; room_next(r
           <argument>
             <kind>1</kind>
             <string>///Draw victory text if we have won and other text
-if (room == 0) {
+if (room == rmTitle) {
     // Draw text on title screen
     scriptWriteTitleScreen();
 } else if (room == rmTutorial1) {

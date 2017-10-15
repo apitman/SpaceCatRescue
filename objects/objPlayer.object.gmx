@@ -95,7 +95,7 @@ if (returning) {
 
 // Destroy objPlayer if we have finished returning to the ship
 with (objShip) {
-    if (y &lt; (other.y + 100 * other.vspeed)) {
+    if (y &lt; (other.y + 50 * other.vspeed)) {
         with (objViewController) {
             zoomIn = false;
             zoomOut = true;
