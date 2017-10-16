@@ -1,2 +1,2 @@
-# One Shot Space Shooter
-This is a space shooter in which you fire yourself as a projectile and use a laser sword to slice through enemy ships. It will be submitted to the 24th GM48 game jam.
+# Space Cat Rescue
+This is a space shooter game made in Game Maker: Studio v1.4 for the 24th GM48 48-hour game jam. In this game, you shoot yourself at an enemy ship and slash your way into the hull in order to free your cat.
